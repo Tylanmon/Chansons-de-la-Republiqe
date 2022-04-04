@@ -1,2 +1,1 @@
-# Heads-or-Tails
-Simple coin fliper
+Marches from the past.
