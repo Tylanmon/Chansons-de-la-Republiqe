@@ -1,4 +1,53 @@
-var div = document.createElement('div');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @font-face {
+    src: url(Font/DINRoundPro-Medi.ttf);
+    font-family: Feather;
+}
+
+div {
+    text-align: center;
+    margin: 20px;
+}   
+
+span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Feather';
+    font-weight: 600;
+    font-size: larger;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 1cm;
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(0,85,164)
+}
+
+h1:hover {
+color: red;
+}
+
+div:hover {
+background-image: url('files/background.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+    </style>
+    <h1>Chants de La Revolution</h1>
+</head>
+<body>
+    <script>
+        var div = document.createElement('div');
 var image = document.createElement('img');
 image.src = 'files/Depart.jpg'; //Image change//
 image.setAttribute('ID', 'DEPART'); //ID change--Image Bold//
@@ -202,3 +251,6 @@ document.getElementById('LINAT').addEventListener('click', function(){
 });
 
 //Song over//
+    </script>
+</body>
+</html>
