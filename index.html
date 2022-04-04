@@ -1,211 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        html{
-text-align: center;
-font-family: Helvetica, Arial, sans-serif;
-position: absolute;
-left: 50%;
-top: 50%;
--webkit-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-background-color: bisque;
-font-size: 20px;
-}
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/Depart.jpg'; //Image change//
+image.setAttribute('ID', 'DEPART'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
 
-body {
-    cursor: pointer;
-    width: 380px;
-    height: 600px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 255, .2);
-    transition: all .2s;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-   }
+const name = document.createElement('span') //add1//
+name.textContent = 'Le Chant du Depart' //Name change//
+div.appendChild(name)
 
-   button {
-    display: inline-block;
-    border-radius: 7px;
-    border: none;
-    background: #1f78ff;
-    color: white;
-    font-weight: bolder;
-    font-family: inherit;
-    text-align: center;
-    font-size: 13px;
-    box-shadow: 0px 14px 56px -11px #1875FF;
-    width: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    height: 30px;
-    border-radius: 5cm;
-    transition: all 0.4s;
-    cursor: pointer;
-   }
+document.body.appendChild(div);
+let audioUsed = false; //add1//
+var audio = new Audio('files/DEPART.mp3'); //Enter music// -- //add1//
 
-   button:hover {
-       background-color: #1c66d4;
-   }
-   
-   a { 
-    text-decoration: none; 
-    color: rgb(0, 0, 0); 
-   }
-    </style>
-</head>
-<body>
-        <a href="https://jsfiddle.net/Tylanmon/y2vfx3jp/3/" title="Click here for the code."><h1>Heads or Tails</h1></a>
-        <button id="HEADB">Heads</button>
-        <button id="TAILSB">Tails</button>
-        <div id="results"></div>
-        <script>
-            document.getElementById('TAILSB').addEventListener('click', function(){
-    HOT = Math.floor((Math.random()) * (100 - 1+1) + 1)
-    if (HOT >= 50){
-        HEADIMG = document.createElement('img')
-        HEADIMG.src = 'https://i.imgur.com/gXOplzY.png'
-        document.body.appendChild(HEADIMG)
-        HEADIMG.style.height = '250px'
-        HEADIMG.style.position = 'absolute'
-        HEADIMG.style.top = '160px'
-        HEADIMG.style.right = '1.9cm'
-
-    }else{
-        HEADIMGS = document.createElement('img')
-        HEADIMGS.src = 'https://i.imgur.com/UcHeTL1.png'
-        document.body.appendChild(HEADIMGS)
-        HEADIMGS.style.height = '250px'
-        HEADIMGS.style.position = 'absolute'
-        HEADIMGS.style.top = '160px'
-        HEADIMGS.style.right = '1.9cm'
+//ID change//
+document.getElementById('DEPART').addEventListener('click', function(){
+    if(audioUsed === true){
+        audio.pause();
+        audioUsed = false;
+    }else {
+        audio.play();
+        audioUsed = true
     }
+});
 
-    if (HOT >= 50) {
+//Song over//
 
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/free.png'; //Image change//
+image.setAttribute('ID', 'FREE'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
 
-       HEAD = document.createElement('h1')
-       HEADC = document.createTextNode('Heads')
-       HEAD.appendChild(HEADC)
-       head = document.getElementById('results')
-       document.body.insertBefore(HEAD, head)
-       HEAD.style.marginBottom = '7cm'
-       HEAD.style.color = 'red'
+const name1 = document.createElement('span') //add1//
+name1.textContent = 'Le Chant des Partisans' //Name change//
+div.appendChild(name1)
 
+document.body.appendChild(div);
+let audioUsed1 = false; //add1//
+var audio1 = new Audio('files/FREE.mp3'); //Enter music// -- //add1//
 
-    }else{
-     TAILS = document.createElement('h1')
-     TAILSC = document.createTextNode('Tails')
-     TAILS.appendChild(TAILSC)
-     tails = document.getElementById('results')
-     document.body.insertBefore(TAILS, tails)
-     TAILS.style.marginBottom = '7cm'
-     TAILS.style.color = '#5DBB63'
+//ID change//
+document.getElementById('FREE').addEventListener('click', function(){
+    if(audioUsed1 === true){
+        audio1.pause();
+        audioUsed1 = false;
+    }else {
+        audio1.play();
+        audioUsed1 = true
     }
+});
 
-    if(HOT <= 50){
-            WINH = document.createElement('H2')
-            WINC = document.createTextNode(`You've won!`)
-            WINH.appendChild(WINC)
-            winh = document.getElementById('results')
-            document.body.insertBefore(WINH,winh)
-         }else{
-          LOSTH = document.createElement('H2')
-          LOSTHC = document.createTextNode(`You've lost.`)
-          LOSTH.appendChild(LOSTHC)
-          losth = document.getElementById('results')
-          document.body.insertBefore(LOSTH,losth)
+//Song over//
 
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/passe.jpg'; //Image change//
+image.setAttribute('ID', 'PASSE'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
+
+const name2 = document.createElement('span') //add1//
+name2.textContent = 'Le reve passe' //Name change//
+div.appendChild(name2)
+
+document.body.appendChild(div);
+let audioUsed2 = false; //add1//
+var audio2 = new Audio('files/PASSE.mp3'); //Enter music// -- //add1//
+
+//ID change//
+document.getElementById('PASSE').addEventListener('click', function(){
+    if(audioUsed2 === true){
+        audio2.pause();
+        audioUsed2 = false;
+    }else {
+        audio2.play();
+        audioUsed2 = true
     }
+});
 
-    document.getElementById('TAILSB').remove()
-    document.getElementById('HEADB').remove()
+//Song over//
 
-    TRYH = document.createElement('button')
-    TRYH.innerHTML = 'Try again?'
-    document.body.appendChild(TRYH)
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/marsa.jpg'; //Image change//
+image.setAttribute('ID', 'MARSA'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
 
-    TRYH.setAttribute('id', 'TRYM')
+const name3 = document.createElement('span') //add1//
+name3.textContent = 'La Marseillaise' //Name change//
+div.appendChild(name3)
 
-    document.getElementById('TRYM').addEventListener('click',function() {
-        location.reload()
-    })  
-})
+document.body.appendChild(div);
+let audioUsed3 = false; //add1//
+var audio3 = new Audio('files/MARSA.mp3'); //Enter music// -- //add1//
 
-document.getElementById('HEADB').addEventListener('click', function(){
-    HOT = Math.floor((Math.random()) * (100 - 1+1) + 1)
-
-    if (HOT >= 50){
-        HEADIMG = document.createElement('img')
-        HEADIMG.src = 'https://i.imgur.com/gXOplzY.png'
-        document.body.appendChild(HEADIMG)
-        HEADIMG.style.height = '250px'
-        HEADIMG.style.position = 'absolute'
-        HEADIMG.style.top = '160px'
-        HEADIMG.style.right = '1.9cm'
-
-    }else{
-        HEADIMGS = document.createElement('img')
-        HEADIMGS.src = 'https://i.imgur.com/UcHeTL1.png'
-        document.body.appendChild(HEADIMGS)
-        HEADIMGS.style.height = '250px'
-        HEADIMGS.style.position = 'absolute'
-        HEADIMGS.style.top = '160px'
-        HEADIMGS.style.right = '1.9cm'
+//ID change//
+document.getElementById('MARSA').addEventListener('click', function(){
+    if(audioUsed3 === true){
+        audio3.pause();
+        audioUsed3 = false;
+    }else {
+        audio3.play();
+        audioUsed3 = true
     }
- 
-    if (HOT >= 50) {
-       HEAD = document.createElement('h1')
-       HEADC = document.createTextNode('Heads')
-       HEAD.appendChild(HEADC)
-       head = document.getElementById('results')
-       document.body.insertBefore(HEAD, head)
-       HEAD.style.marginBottom = '7cm'
-       HEAD.style.color = '#5DBB63'
+});
 
-    }else{
-     TAILS = document.createElement('h1')
-     TAILSC = document.createTextNode('Tails')
-     TAILS.appendChild(TAILSC)
-     tails = document.getElementById('results')
-     document.body.insertBefore(TAILS, tails)
-     TAILS.style.marginBottom = '7cm'
-     TAILS.style.color = 'red'
+//Song over//
 
+//Song over//
+
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/quand.jpg'; //Image change//
+image.setAttribute('ID', 'QUAND'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
+
+const name4 = document.createElement('span') //add1//
+name4.textContent = 'Quand fera-t-il jour camarade' //Name change//
+div.appendChild(name4)
+
+document.body.appendChild(div);
+let audioUsed4 = false; //add1//
+var audio4 = new Audio('files/QUAND.mp3'); //Enter music// -- //add1//
+
+//ID change//
+document.getElementById('QUAND').addEventListener('click', function(){
+    if(audioUsed4 === true){
+        audio4.pause();
+        audioUsed4 = false;
+    }else {
+        audio4.play();
+        audioUsed4 = true
     }
+});
 
-    if(HOT >= 50){
-            WINH = document.createElement('h2')
-            WINC = document.createTextNode(`You've won!`)
-            WINH.appendChild(WINC)
-            winh = document.getElementById('results')
-            document.body.insertBefore(WINH,winh)
-         }else{
-          LOSTH = document.createElement('h2')
-          LOSTHC = document.createTextNode(`You've lost.`)
-          LOSTH.appendChild(LOSTHC)
-          losth = document.getElementById('results')
-          document.body.insertBefore(LOSTH,losth)
+//Song over//
 
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/ahca.jpeg'; //Image change//
+image.setAttribute('ID', 'AHCA'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
+
+const name5 = document.createElement('span') //add1//
+name5.textContent = 'ah CA ira' //Name change//
+div.appendChild(name5)
+
+document.body.appendChild(div);
+let audioUsed5 = false; //add1//
+var audio5 = new Audio('files/AHCA.mp3'); //Enter music// -- //add1//
+
+//ID change//
+document.getElementById('AHCA').addEventListener('click', function(){
+    if(audioUsed5 === true){
+        audio5.pause();
+        audioUsed5 = false;
+    }else {
+        audio5.play();
+        audioUsed5 = true
     }
-    
-    document.getElementById('TAILSB').remove()
-    document.getElementById('HEADB').remove()
+});
 
-    TRYH = document.createElement('button')
-    TRYH.innerHTML = 'Try again?'
-    document.body.appendChild(TRYH)
+//Song over//
 
-    TRYH.setAttribute('id', 'TRYM')
+var div = document.createElement('div');
+var image = document.createElement('img');
+image.src = 'files/linat.png'; //Image change//
+image.setAttribute('ID', 'LINAT'); //ID change--Image Bold//
+div.appendChild(image);
+image.style.width = '300px';
+image.style.borderRadius = '10px';
 
-    document.getElementById('TRYM').addEventListener('click',function() {
-        location.reload()
-    })  
-})
+const name6 = document.createElement('span') //add1//
+name6.textContent = "L'International" //Name change//
+div.appendChild(name6)
 
+document.body.appendChild(div);
+let audioUsed6 = false; //add1//
+var audio6 = new Audio('files/LINAT.mp3'); //Enter music// -- //add1//
 
-        </script>
-</body>
-</html>
+//ID change//
+document.getElementById('LINAT').addEventListener('click', function(){
+    if(audioUsed6 === true){
+        audio6.pause();
+        audioUsed6 = false;
+    }else {
+        audio6.play();
+        audioUsed6 = true
+    }
+});
 
+//Song over//
